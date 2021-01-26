@@ -1,9 +1,9 @@
 <template>
-  <div class="pt-16">
+  <div class="pt-16" :dir="$i18n.locale == 'he' ? 'rtl' : 'ltr'">
     <AppHeader />
 
-    <main class="container mx-auto px-4 lg:px-8">
-      <div class="flex flex-wrap relative">
+    <main class="container px-4 mx-auto lg:px-8">
+      <div class="relative flex flex-wrap">
         <AppNav />
 
         <Nuxt class="w-full lg:w-4/5" />
