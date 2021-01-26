@@ -14,7 +14,8 @@
 .nuxt-content {
   @apply break-words;
 
-  & h2, & h3 {
+  & h2,
+  & h3 {
     /* Fix anchor scrollTo */
     &::before {
       display: block;
@@ -31,7 +32,7 @@
 
       &::before {
         content: "#";
-        @apply text-primary-500 font-normal text-xl leading-8 -ms-5 pe-2 absolute opacity-100;
+        @apply absolute text-xl font-normal leading-8 opacity-100 text-primary-500 -ms-5 pe-2;
       }
 
       @screen lg {
@@ -54,7 +55,7 @@
 
     /* Style filename span added by @nuxt/content */
     & > .filename {
-      @apply absolute right-0 top-0 text-gray-100 z-10 font-mono text-sm tracking-tight leading-none me-4 mt-3;
+      @apply absolute top-0 right-0 z-10 mt-3 font-mono text-sm leading-none tracking-tight text-gray-100 me-4;
     }
 
     /* Add top padding to code blocks with filename */
@@ -64,14 +65,14 @@
 
     /* Style copy button added in `pages/_.vue` */
     & > .copy {
-      @apply hidden absolute right-0 bottom-0 leading-none shadow-lg px-2 py-2 text-white bg-gray-800 text-sm uppercase rounded-md border border-white font-semibold me-3 mb-3;
+      @apply absolute bottom-0 right-0 hidden px-2 py-2 mb-3 text-sm font-semibold leading-none text-white uppercase bg-gray-800 border border-white rounded-md shadow-lg me-3;
 
       &:hover {
         @apply bg-gray-700;
       }
 
       &:focus {
-        @apply outline-none bg-gray-600;
+        @apply bg-gray-600 outline-none;
       }
     }
     &:hover {
@@ -84,6 +85,6 @@
   /* Force style on pre elements */
   & pre[class*="language-"] {
     /* Make pre static so the relative goes to the parent (.nuxt-content-highlight) */
-    @apply bg-gray-800 static;
+    @apply static bg-gray-800;
   }
 }

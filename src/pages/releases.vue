@@ -6,12 +6,12 @@
     }"
   >
     <div
-      class="w-full lg:w-3/4 py-4 lg:pt-8 lg:pb-4 dark:border-gray-800"
+      class="w-full py-4 lg:w-3/4 lg:pt-8 lg:pb-4 dark:border-gray-800"
       :class="{
         'lg:border-l lg:border-r': settings.layout !== 'single'
       }"
     >
-      <article class="prose dark:prose-dark max-w-none lg:px-8">
+      <article class="prose dark:prose-dark max-w-none lg:px-8" :class="{'prose-rtl': $i18n.locale == 'he'}">
         <h1>Releases</h1>
 
         <div v-for="release of releases" :key="release.name">

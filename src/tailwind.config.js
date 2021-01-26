@@ -9,6 +9,13 @@ const plugin = require('tailwindcss/plugin')
 const defaultTheme = require('tailwindcss/defaultTheme')
 const selectorParser = require('postcss-selector-parser')
 const { getColors } = require('theme-colors')
+const round = (num) =>
+  num
+    .toFixed(7)
+    .replace(/(\.[0-9]+?)0+$/, '$1')
+    .replace(/\.0$/, '')
+const rem = (px) => `${round(px / 16)}rem`
+const em = (px, base) => `${round(px / base)}em`
 
 module.exports = ({ nuxt }) => ({
   future: {
@@ -147,7 +154,60 @@ module.exports = ({ nuxt }) => ({
             borderBottomColor: theme('colors.gray.700')
           }
         }
-      }
+      },
+      rtl: {
+        css: [
+          {
+            blockquote: {
+              borderLeftWidth: '0',
+              borderLeftColor: 'none',
+              borderRightWidth: '0.25rem',
+              borderRightColor: theme('colors.gray.700'),
+            },
+            table: {
+              textAlign: 'right',
+            },
+          },
+          {
+            blockquote: {
+              paddingLeft: 0,
+              paddingRight: em(20, 20),
+            },
+            'ol > li': {
+              paddingLeft: 0,
+              paddingRight: em(28, 16),
+            },
+            'ol > li::before': {
+              right: '0',
+              left: 'auto',
+            },
+            'ul > li': {
+              paddingLeft: 0,
+              paddingRight: em(28, 16),
+            },
+            'ul > li::before': {
+              right: em(4, 16),
+              left: 'auto',
+            },
+            'thead th:first-child': {
+              paddingLeft: 'auto',
+              paddingRight: '0',
+            },
+            'thead th:last-child': {
+              paddingRight: 'auto',
+              paddingLeft: '0',
+            },
+            'tbody td:first-child': {
+              paddingLeft: 'auto',
+              paddingRight: '0',
+            },
+            'tbody td:last-child': {
+              paddingRight: 'auto',
+              paddingLeft: '0',
+            },
+          },
+        ],
+      },
     })
   },
   variants: {
