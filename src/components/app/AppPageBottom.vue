@@ -7,7 +7,7 @@
       class="text-gray-600 dark:text-gray-400 text-sm font-medium hover:underline flex items-center"
     >
       {{ $t('article.github') }}
-      <IconExternalLink class="w-4 h-4 ml-1" />
+      <IconExternalLink class="w-4 h-4 ms-1" />
     </a>
     <span class="text-gray-600 dark:text-gray-400 text-sm font-medium flex items-center">
       {{ $t("article.updatedAt") }} {{ $d(Date.parse(document.updatedAt), "long") }}

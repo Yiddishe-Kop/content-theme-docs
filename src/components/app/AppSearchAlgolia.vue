@@ -155,7 +155,7 @@ export default {
 }
 
 .DocSearch-Button {
-  @apply w-full ml-0 rounded-md px-3 !important;
+  @apply w-full ms-0 rounded-md px-3 !important;
 }
 
 .DocSearch-Button-Placeholder {

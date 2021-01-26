@@ -6,6 +6,7 @@ export default {
     title: 'בעמוד זה'
   },
   article: {
-    github: 'ערוך עמוד זה בגיטהאב'
+    github: 'ערוך עמוד זה בגיטהאב',
+    updatedAt: 'עודכן'
   }
 }

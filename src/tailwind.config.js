@@ -185,6 +185,7 @@ module.exports = ({ nuxt }) => ({
       })
     }),
     require('@tailwindcss/typography'),
+    require('tailwindcss-rtl'),
     require('tailwind-css-variables')(
       {
         colors: 'color',

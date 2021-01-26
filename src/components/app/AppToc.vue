@@ -4,7 +4,7 @@
       <nav
         class="py-4 lg:py-8"
         :class="{
-          'lg:pl-8 lg:pr-2': settings.layout !== 'single',
+          'lg:ps-8 lg:pe-2': settings.layout !== 'single',
           'lg:px-8': settings.layout === 'single'
         }"
       >
@@ -22,13 +22,13 @@
           >
             <a
               :href="`#${link.id}`"
-              class="block text-sm scrollactive-item transition-padding ease-in-out duration-300 hover:pl-1"
+              class="block text-sm scrollactive-item transition-padding ease-in-out duration-300 hover:ps-1"
               :class="{
                 'py-2': link.depth === 2,
-                'ml-2 pb-2': link.depth === 3,
-                'ml-3 pb-2': link.depth === 4,
-                'ml-4 pb-2': link.depth === 5,
-                'ml-5 pb-2': link.depth === 6
+                'ms-2 pb-2': link.depth === 3,
+                'ms-3 pb-2': link.depth === 4,
+                'ms-4 pb-2': link.depth === 5,
+                'ms-5 pb-2': link.depth === 6
               }"
             >{{ link.text }}</a>
           </li>
