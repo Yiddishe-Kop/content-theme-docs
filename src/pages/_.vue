@@ -6,7 +6,7 @@
     }"
   >
     <div
-      class="w-full py-4 lg:pt-8 lg:pb-4 dark:border-gray-800"
+      class="w-full lg:pt-8 dark:border-gray-800"
       :class="{
         'lg:w-3/4': !document.fullscreen,
         'lg:border-l lg:border-r': settings.layout !== 'single'
@@ -58,7 +58,7 @@ export default {
     const [prev, next] = await $content(app.i18n.locale, { deep: true })
       .only(['title', 'path', 'to'])
       .sortBy('position', 'asc')
-      .surround(document.path, { before: 1, after: 1 })
+      .surround(document.slug, { before: 1, after: 1 })
       .fetch()
 
     return {
