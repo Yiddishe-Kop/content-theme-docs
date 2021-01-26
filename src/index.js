@@ -164,7 +164,8 @@ const defaultConfig = docsOptions => ({
   googleFonts: {
     families: {
       'DM+Sans': true,
-      'DM+Mono': true
+      'DM+Mono': true,
+      Heebo: true,
     }
   },
   tailwindcss: {}

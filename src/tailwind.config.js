@@ -20,7 +20,7 @@ module.exports = ({ nuxt }) => ({
   theme: {
     extend: {
       fontFamily: {
-        sans: ['DM Sans', ...defaultTheme.fontFamily.sans],
+        sans: ['DM Sans', 'Heebo', ...defaultTheme.fontFamily.sans],
         mono: ['DM Mono', ...defaultTheme.fontFamily.mono]
       },
       colors: {
